@@ -1,0 +1,80 @@
+body{
+    color: #3F3D56;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.container{
+    background-color: #f1f1f1;
+    padding: 1.25em;
+    margin: 1.25em ;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+.container form .form-inner{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+.container form label{
+    display: block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom:0.2rem;
+}
+.container form input{
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: #3F3D5691; */
+    border: 2px solid #3F3D5691;
+    border-radius: 0.6rem;
+    outline: none;
+    padding: 0.625rem 1.25rem; 
+    width: 100%;
+    /* width 100% to always go till the end for mobile screen */
+}
+
+.container form input:focus{
+    border-color: #3F3D56;
+}
+.container form .btn{
+    color: #f1f1f1;
+    padding: 0.625rem 3rem;
+    background-color: #3F3D56;
+    margin-top: 1.25rem;
+    border: none;
+    outline: none;
+    border-radius: 0.625rem;
+    transition: opacity 0.2s ease-in-out;
+}
+.container form .btn:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+/* input and button are not going to take up the default font family on the body --> we need to inherrit */
+/* Inline elements: labels,small, button, span, a,input,..*/
+/* Block elements: everything else(div,section,all headings,article,aside,figure,header,nav,p)*/
+/* margin,text-align doesnt work with inline element */
+/* box-sizing: provide margin and when adjust padding and border on an element, padding and border are included in the width and height: */
+/* ontline:none me remove the margin */
+@media(min-width:700px){
+    .container{
+        margin: 1.25rem auto;
+        padding: 2rem;
+    }
+    .container form .form-inner{
+        grid-template-columns: 1fr 1fr;
+    }
+}
